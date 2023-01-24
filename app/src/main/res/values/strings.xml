@@ -3,4 +3,9 @@
     <string name="knight_s_game">Knight\'s Game</string>
     <string name="the_game">The Game</string>
     <string name="start_button">start</string>
+    <string name="enter_matrix_size">Enter matrix size</string>
+    <string name="matrix_constraint_text">prefereably between 6 and 16</string>
+    <string name="info">Just tap on the desired cell of the chessboard to be the starting point
+            and then again to the destination point. The moves will be shown in a Toast Text.
+            Reseting the board happens automatically for now, after the moves have been shown to user</string>
 </resources>

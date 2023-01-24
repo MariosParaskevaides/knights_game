@@ -21,6 +21,10 @@
         android:name="com.map.knights_game.game.GameFragment"
         android:label="GameFragment"
         tools:layout="@layout/fragment_the_game">
+        <argument
+            android:name="dimension"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
 
 </navigation>

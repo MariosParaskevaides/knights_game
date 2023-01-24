@@ -15,15 +15,25 @@ class WelcomeScreenFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         welcomeBinding = FragmentWelcomeScreenBinding.inflate(inflater, container, false)
         setupListeners()
+
+
         return welcomeBinding.root
     }
 
     private fun setupListeners() {
+
         welcomeBinding.startTheGame.setOnClickListener { _ ->
-            val action = WelcomeScreenFragmentDirections.actionWelcomeScreenFragmentToGameFragment()
+
+            var dimension: Int = 0
+
+            if (!welcomeBinding.editText.text.isNullOrBlank()) {
+                dimension = welcomeBinding.editText.text.toString().toInt()
+            }
+
+            val action = WelcomeScreenFragmentDirections.actionWelcomeScreenFragmentToGameFragment(dimension)
             findNavController().navigate(action)
         }
     }
